@@ -1,7 +1,12 @@
+import { Hero } from "@/components/page/home";
 import React from "react";
 
 const Home = () => {
-  return <div className="h-screen w-full bg-transparent">Home</div>;
+  return (
+    <div className="w-full min-h-screen">
+      <Hero />
+    </div>
+  );
 };
 
 export default Home;
