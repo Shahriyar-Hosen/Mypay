@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const RootLayout: FC<Readonly<IChildren>> = ({ children }) => (
   <html lang="en">
     <body className={inter.className}>
-      <div className="w-full h-full bg-[#00020D] min-h-screen">
+      <div className="w-full h-full bg-[#00020D] text-white min-h-screen">
         <div className="max-w-[1435px] mx-auto px-2.5 md:px-6 lg:px-7 relative overflow-hidden">
           {children}
         </div>
