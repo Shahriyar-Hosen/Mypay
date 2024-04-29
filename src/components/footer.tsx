@@ -30,7 +30,7 @@ export const Footer = () => {
           </div>
         ))}
       </div>
-      <div className="py-5 mt-10 border-t border-slate-600/40 flex justify-center md:justify-between items-center gap-5 flex-wrap">
+      <div className="py-5 mt-10 border-t border-slate-600/40 flex justify-center md:justify-between items-center gap-5 sm:gap-10 flex-wrap">
         <p className="text-white/60 text-base lg:text-lg text-center md:text-start">
           Copyright &nbsp;&copy;&nbsp; {new Date().getFullYear()} EvoFin. All
           Rights Reserved.
