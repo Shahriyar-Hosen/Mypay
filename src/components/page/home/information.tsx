@@ -1,5 +1,9 @@
-import React from "react";
+import { SectionTitle } from "@/components/common";
 
 export const Information = () => {
-  return <section>Information request</section>;
+  return (
+    <section className="py-10 lg:py-20">
+      <SectionTitle>Demande d’information</SectionTitle>
+    </section>
+  );
 };

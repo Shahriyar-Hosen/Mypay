@@ -8,6 +8,7 @@ import Slider from "react-slick";
 // Import css files
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
+import { SectionTitle } from "./section-title";
 
 export const FullSlider = () => {
   const settings = {
@@ -56,14 +57,7 @@ type ISlider = { title: string } & IClassName;
 export const SliderSection: FC<ISlider> = ({ title, className }) => {
   return (
     <section className="space-y-5 lg:space-y-12">
-      <h1
-        className={cn(
-          "text-xl lg:text-3xl font-semibold text-[#dcdcdc] text-center",
-          className
-        )}
-      >
-        {title}
-      </h1>
+      <SectionTitle className={className}>{title}</SectionTitle>
       <FullSlider />
     </section>
   );
