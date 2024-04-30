@@ -1,10 +1,14 @@
-import { BackgroundImg, GradientShadow } from "@/components/common";
+import {
+  AbsoluteImg,
+  BackgroundImg,
+  GradientShadow,
+} from "@/components/common";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { FC } from "react";
 
 const CardButton: FC<IChildren> = ({ children }) => (
-  <button className="bg-gradient-lite text-base md:text-lg font-semibold text-black px-5 md:px-9 py-1.5 rounded-full">
+  <button className="bg-gradient-lite text-sm md:text-lg font-semibold text-black px-5 md:px-9 py-1.5 rounded-full">
     {children}
   </button>
 );
@@ -109,22 +113,25 @@ const CustomMadeCard = () => {
     { label: "Interface Adaptée aux Mobiles" },
   ];
   return (
-    <BackgroundImg
-      img="/card-bg.png"
-      className="w-full max-w-[560px] rounded-xl overflow-hidden xl:-mt-2.5 xl:-ml-3.5 pb-10"
-    >
-      <CardContainer>
-        <CardButton>CUSTOM MADE</CardButton>
-        <h1 className="bg-gradient-text-lite font-bold text-base md:text-[19px] leading-[28.5px]">
-          Dix fonctionnalités essentielles
-        </h1>
-        <UnorderedListItems className="md:px-10">
-          {customCardItem.map((item, i) => (
-            <CardListItem key={i} {...item} />
-          ))}
-        </UnorderedListItems>
-      </CardContainer>
-    </BackgroundImg>
+    <div className="relative w-full max-w-[560px] z-50">
+      <GradientShadow className="bottom-0 right-40 hidden sm:block" />
+      <BackgroundImg
+        img="/card-bg.png"
+        className="rounded-xl overflow-hidden xl:-mt-2.5 xl:-ml-3.5 pb-10 relative shadow-2xl shadow-cyan-700/20"
+      >
+        <CardContainer>
+          <CardButton>CUSTOM MADE</CardButton>
+          <h1 className="bg-gradient-text-lite font-bold text-base md:text-[19px] leading-[28.5px]">
+            Dix fonctionnalités essentielles
+          </h1>
+          <UnorderedListItems className="md:px-10">
+            {customCardItem.map((item, i) => (
+              <CardListItem key={i} {...item} />
+            ))}
+          </UnorderedListItems>
+        </CardContainer>
+      </BackgroundImg>
+    </div>
   );
 };
 
@@ -140,9 +147,15 @@ export const Subscribe = () => {
         </p>
       </div>
 
-      <div className="flex flex-col xl:flex-row justify-center items-center xl:items-start gap-10 xl:gap-0 pt-10">
+      <div className="flex flex-col xl:flex-row justify-center items-center xl:items-start gap-10 xl:gap-0 pt-10 relative">
         <StandardCard />
         <CustomMadeCard />
+
+        <AbsoluteImg
+          img="/bg-line.png"
+          imgClass="w-[170px] h-[170px]"
+          className="hidden xl:block top-[45%] left-[90%]"
+        />
       </div>
     </section>
   );
