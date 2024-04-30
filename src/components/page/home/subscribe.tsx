@@ -11,16 +11,13 @@ export const Subscribe = () => {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit
         </p>
       </div>
-      {/* bg-gradient-to-r from-[#4B86FC] to-[#75F2F6] */}
-      <div className="w-full max-w-[800px] h-[800px]  p-[2px] rounded-[10px] relative">
-        <div className="w-full h-full bg-[#F1F1FF]/20 rounded-[10px] relative">
-          <div className="absolute -top-5 left-20 w-[356px] h-[444px] rotate-[47.46deg] rounded-[200px] bg-gradient-to-l from-[#26D0CE] to-[#1A2980] filter blur-[300px]" />
-          <Button>hello</Button>
+      <div className="w-full max-w-[800px] h-[800px] bg-gradient-to-r from-[#4B86FC] to-[#75F2F6]  p-[2px] rounded-[10px] relative">
+        <div className="w-full h-full bg-slate-800 rounded-[10px] ">
+          <div className="w-full h-full bg-[#F1F1FF]/20 rounded-[10px] relative">
+            <div className="absolute -top-5 left-20 w-[356px] h-[444px] rotate-[47.46deg] rounded-[200px] bg-gradient-to-l from-[#26D0CE] to-[#1A2980] filter blur-[400px]" />
+            <Button>hello</Button>
+          </div>
         </div>
-      </div>
-
-      <div className="bg-[#F1F1FF]/20 rounded-[10px] max-w-[800px]">
-        <Button>hello</Button>
       </div>
     </section>
   );
