@@ -4,3 +4,9 @@ declare interface IChildren {
 declare interface IClassName {
   className?: string;
 }
+
+declare interface IAbsoluteImg extends IClassName {
+  img: string;
+  alt?: string;
+  imgClass?: string;
+}
