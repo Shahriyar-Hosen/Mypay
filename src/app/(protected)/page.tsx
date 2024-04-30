@@ -10,7 +10,7 @@ const Home = () => {
       <API />
       <SliderSection
         title="Nos clients"
-        className="text-xl md:text-3xl lg:text-5xl font-medium text-[#f7f7f7]"
+        className="text-xl md:text-3xl lg:text-5xl font-medium text-[#f7f7f7] pt-10"
       />
     </div>
   );

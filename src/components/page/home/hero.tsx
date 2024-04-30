@@ -1,11 +1,35 @@
 import { AbsoluteImg } from "@/components/common";
+import { cn } from "@/lib/utils";
 import Image from "next/image";
+import { FC } from "react";
+
+export const Button: FC<IChildren & IClassName> = ({ children, className }) => (
+  <button className="w-fit bg-gradient-to-r from-[#4B86FC] to-[#75F2F6] p-[2px] rounded-full mx-auto">
+    <div
+      className={cn(
+        "h-full w-full p-1.5 lg:p-2 flex items-center justify-center gap-2.5 bg-[#00020D] rounded-full",
+        className
+      )}
+    >
+      <span className="font-medium text-base lg:text-xl uppercase bg-gradient-to-r from-[#4B86FC] to-[#75F2F6] bg-clip-text text-transparent pl-2.5">
+        {children}
+      </span>
+      <Image
+        src="/button-arrow-color-icon.png"
+        width={37}
+        height={37}
+        className="w-[25px] h-auto lg:w-[37px]"
+        alt=""
+      />
+    </div>
+  </button>
+);
 
 export const Hero = () => {
   return (
     <section className="flex flex-col-reverse md:flex-row justify-between items-center gap-10 relative pb-10 md:pb-40">
       <div className="space-y-5 md:pt-20 min-w-fit">
-        <h1 className="text-center md:text-start text-xl md:text-2xl lg:text-4xl xl:text-5xl font-bold md:leading-[40.5px] lg:leading-[60.5px] xl:leading-[70.5px] md:max-w-[361px] lg:max-w-[541px] xl:max-w-[721px]">
+        <h1 className="text-center md:text-start text-2xl lg:text-4xl xl:text-5xl font-bold md:leading-[40.5px] lg:leading-[60.5px] xl:leading-[70.5px] md:max-w-[361px] lg:max-w-[541px] xl:max-w-[721px]">
           <span className="bg-gradient-to-r from-[#4B86FC] to-[#75F2F6] bg-clip-text text-transparent">
             MyPay&nbsp;
           </span>
@@ -20,20 +44,7 @@ export const Hero = () => {
           valutarum. Servitia Financia et Investitiones , Mercator es titulorum
           Pecuniae mutuatae ad diem Mercatores cryptae valutarum.
         </p>
-        <button className="w-fit bg-gradient-to-r from-[#4B86FC] to-[#75F2F6] p-[2px] rounded-full">
-          <div className="h-full w-full p-2.5 lg:p-3.5 flex items-center justify-center gap-2.5 bg-[#00020D] rounded-full">
-            <span className="font-medium text-base lg:text-xl uppercase bg-gradient-to-r from-[#4B86FC] to-[#75F2F6] bg-clip-text text-transparent pl-2.5">
-              commencer
-            </span>
-            <Image
-              src="/button-arrow-color-icon.png"
-              width={37}
-              height={37}
-              className="w-[25px] h-auto lg:w-[37px]"
-              alt=""
-            />
-          </div>
-        </button>
+        <Button>commencer</Button>
       </div>
 
       <div className="relative pt-10 md:pt-0">
