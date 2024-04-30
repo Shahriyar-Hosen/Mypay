@@ -3,10 +3,12 @@ import React from "react";
 
 export const Subscribe = () => {
   return (
-    <section>
-      <div className="text-center font-medium py-5">
-        <h1 className="text-5xl">Choisissez votre pack & Abonnez-vous</h1>
-        <p className="text-lg text-[#E1E1E1]">
+    <section className="py-20">
+      <div className="text-center font-medium py-5 space-y-5">
+        <h1 className="text-xl md:text-3xl xl:text-5xl">
+          Choisissez votre pack & Abonnez-vous
+        </h1>
+        <p className="text-xs md:text-base lg:text-lg text-[#E1E1E1]">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit
         </p>
       </div>
