@@ -1,11 +1,8 @@
-"use client";
-
 import { cn } from "@/lib/utils";
 import Image, { StaticImageData } from "next/image";
 import { FC, PropsWithChildren, memo } from "react";
 
 /**
- *
  * @param img StaticImageData
  * @param children
  * @param className (optional)
