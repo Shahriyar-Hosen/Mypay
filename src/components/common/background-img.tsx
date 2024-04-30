@@ -1,11 +1,8 @@
-"use client";
-
 import { cn } from "@/lib/utils";
 import Image, { StaticImageData } from "next/image";
 import { FC, PropsWithChildren, memo } from "react";
 
 /**
- *
  * @param img StaticImageData
  * @param children
  * @param className (optional)
@@ -16,8 +13,8 @@ import { FC, PropsWithChildren, memo } from "react";
  */
 
 export interface IBackgroundImage extends PropsWithChildren, IClassName {
-  img: StaticImageData;
-  mobImg?: StaticImageData;
+  img: string;
+  mobImg?: string;
   overflow?: boolean;
 }
 
