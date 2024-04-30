@@ -1,21 +1,45 @@
 import { BackgroundImg, GradientShadow } from "@/components/common";
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { FC } from "react";
+
 const CardButton: FC<IChildren> = ({ children }) => (
-  <button className="bg-gradient-lite text-lg font-semibold text-black px-9 py-2.5 rounded-full">
+  <button className="bg-gradient-lite text-base md:text-lg font-semibold text-black px-5 md:px-9 py-1.5 rounded-full">
     {children}
   </button>
 );
 const CardContainer: FC<IChildren> = ({ children }) => (
-  <div className="p-6 flex flex-col justify-start items-center gap-12">
-    {children}{" "}
+  <div className="p-3.5 md:p-6 flex flex-col justify-start items-center gap-5 sm:gap-8 md:gap-10 lg:gap-12">
+    {children}
   </div>
 );
 const CardListItem: FC<{ label: string }> = ({ label }) => (
-  <li className="flex justify-center items-center gap-2.5">
-    <Image src="/check-circle.png" width={32} height={32} alt="" />
-    <span>{label}</span>
+  <li className="flex justify-start md:items-center items-center gap-1 md:gap-2.5 w-full">
+    <Image
+      src="/check-circle.png"
+      width={32}
+      height={32}
+      className="w-full max-w-[20px] md:max-w-[32px] h-auto max-h-[20px] md:max-h-[32px]"
+      alt=""
+    />
+    <span className="text-sm sm:text-base lg:text-[19px] font-medium leading-5 lg:leading-[28.5px] text-[#f7f7f7]">
+      {label}
+    </span>
   </li>
+);
+
+const UnorderedListItems: FC<IChildren & IClassName> = ({
+  children,
+  className,
+}) => (
+  <ul
+    className={cn(
+      "flex flex-col items-start gap-3.5 md:gap-5 w-full",
+      className
+    )}
+  >
+    {children}
+  </ul>
 );
 
 const StandardCard = () => {
@@ -27,15 +51,15 @@ const StandardCard = () => {
     { label: "Vente de produits numériques" },
   ];
   return (
-    <div className="w-full max-w-[800px] h-[800px] bg-gradient-lite p-[2px] rounded-[10px] relative z-50">
+    <div className="w-full max-w-[800px] bg-gradient-lite p-[2px] rounded-[10px] relative z-50">
       <div className="w-full h-full bg-slate-800 rounded-[10px]">
         <div className="w-full h-full bg-[#F1F1FF]/20 rounded-[10px] relative">
-          <GradientShadow className="-top-10 left-40" />
+          <GradientShadow className="-top-10 left-40 hidden sm:block" />
 
           <CardContainer>
             <CardButton>STANDARD</CardButton>
 
-            <div className="flex gap-5">
+            <div className="flex gap-3 lg:gap-5">
               <Image src="/logo/cd-logo.svg" width={62} height={44} alt="" />
               <Image
                 src="/logo/MasterCard-Logo.svg"
@@ -46,23 +70,23 @@ const StandardCard = () => {
               <Image src="/logo/visa-logo.svg" width={74} height={28} alt="" />
             </div>
 
-            <h3 className="font-semibold text-[70px] leading-[105px] bg-gradient-text-lite">
+            <h3 className="font-semibold text-[40px] md:text-[50px] lg:text-[70px] md:leading-[80px] lg:leading-[105px] bg-gradient-text-lite">
               5% + 0.25 €
             </h3>
 
-            <div className="space-y-7 w-full px-10">
-              <h6 className="text-[19px] font-bold leading-[28.5px] text-[#E5E5E5]">
+            <div className="space-y-5 md:space-y-7 w-full md:px-10">
+              <h6 className="text-base lg:text-[19px] font-bold leading-[28.5px] text-[#E5E5E5]">
                 Business Acceptés :
               </h6>
 
-              <ul className="flex flex-col items-start gap-5">
+              <UnorderedListItems>
                 {businessAccepted.map((item, i) => (
                   <CardListItem key={i} {...item} />
                 ))}
-              </ul>
+              </UnorderedListItems>
             </div>
           </CardContainer>
-          <button className="bg-[#07111E] w-full rounded-lg text-center font-medium text-[28px] leading-[42px] py-5 mt-4">
+          <button className="bg-[#07111E] w-full rounded-lg text-center font-medium text-[28px] leading-[42px] py-2.5 md:py-5 mt-4">
             Démarrer
           </button>
         </div>
@@ -87,19 +111,18 @@ const CustomMadeCard = () => {
   return (
     <BackgroundImg
       img="/card-bg.png"
-      className="w-[560px] h-[756px] rounded-xl overflow-hidden -mt-2.5 -ml-3.5"
+      className="w-full max-w-[560px] rounded-xl overflow-hidden xl:-mt-2.5 xl:-ml-3.5 pb-10"
     >
       <CardContainer>
         <CardButton>CUSTOM MADE</CardButton>
-        <h1 className="bg-gradient-text-lite font-bold text-[19px] leading-[28.5px]">
+        <h1 className="bg-gradient-text-lite font-bold text-base md:text-[19px] leading-[28.5px]">
           Dix fonctionnalités essentielles
         </h1>
-
-        <ul className="flex flex-col items-start gap-5 w-full px-10">
+        <UnorderedListItems className="md:px-10">
           {customCardItem.map((item, i) => (
             <CardListItem key={i} {...item} />
           ))}
-        </ul>
+        </UnorderedListItems>
       </CardContainer>
     </BackgroundImg>
   );
@@ -117,7 +140,7 @@ export const Subscribe = () => {
         </p>
       </div>
 
-      <div className="flex flex-col xl:flex-row justify-center items-start pt-10">
+      <div className="flex flex-col xl:flex-row justify-center items-center xl:items-start gap-10 xl:gap-0 pt-10">
         <StandardCard />
         <CustomMadeCard />
       </div>
