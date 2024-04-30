@@ -1,154 +1,70 @@
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
+"use client";
 
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/effect-coverflow";
-import "swiper/css/free-mode";
-import "swiper/css/pagination";
+import { sliderImage } from "@/lib/constants";
+import { cn } from "@/lib/utils";
+import Image from "next/image";
+import { FC } from "react";
+import Slider from "react-slick";
+// Import css files
+import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
 
-// import required modules
-import { Autoplay, FreeMode, Navigation, Pagination } from "swiper/modules";
+export const FullSlider = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 1000,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+    ],
+  };
 
-const Slider = () => {
   return (
-    <>
-      <Swiper
-        slidesPerView={1}
-        spaceBetween={30}
-        loop={true}
-        // loopFillGroupWithBlank={true}
-        autoplay={{
-          delay: 5000,
-          disableOnInteraction: true,
-        }}
-        navigation={false}
-        breakpoints={{
-          440: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          668: {
-            slidesPerView: 3,
-            spaceBetween: 40,
-          },
-          980: {
-            slidesPerView: 3,
-            spaceBetween: 40,
-          },
-          1100: {
-            slidesPerView: 4,
-            spaceBetween: 40,
-          },
-          1280: {
-            slidesPerView: 5,
-            spaceBetween: 50,
-          },
-        }}
-        modules={[FreeMode, Autoplay, Pagination, Navigation]}
-        className="mySwiper"
-      >
-        <SwiperSlide className="my-5 pb-5">
-          <div className="rounded-xl w-44 h-44 bg-gray-50 shadow-xl">
-            <figure>
-              <img
-                className="w-full p-12 pt-12 pb-2"
-                src="https://i.ibb.co/KNMMDRd/hiking.png"
-                alt="Package"
-              />
-            </figure>
-            <div className="text-center text-2xl font-semibold font-serif">
-              Hiking
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className="my-5 pb-5">
-          <div className="card card-compact w-44 h-44 bg-gray-50  shadow-xl">
-            <figure>
-              <img
-                className="w-full p-12 pt-12 pb-2"
-                src="https://i.ibb.co/JRRPkdK/sunbed.png"
-                alt="Package"
-              />
-            </figure>
-            <div className="text-center text-2xl font-semibold font-serif">
-              Sunbed
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className="my-5 pb-5">
-          <div className="card card-compact w-44 h-44 bg-gray-50  shadow-xl">
-            <figure>
-              <img
-                className="w-full p-12 pt-12 pb-2"
-                src="https://i.ibb.co/9Nx1DmR/surf.png"
-                alt="Package"
-              />
-            </figure>
-            <div className="text-center text-2xl font-semibold font-serif">
-              Surf
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className="my-5 pb-5">
-          <div className="card card-compact w-44 h-44 bg-gray-50  shadow-xl">
-            <figure>
-              <img
-                className="w-full p-12 pt-12 pb-2"
-                src="https://i.ibb.co/GPmC65f/safari.png"
-                alt="Package"
-              />
-            </figure>
-            <div className="text-center text-2xl font-semibold font-serif">
-              Safari
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className="my-5 pb-5">
-          <div className="card card-compact w-44 h-44 bg-gray-50  shadow-xl">
-            <figure>
-              <img
-                className="w-full p-12 pt-12 pb-2"
-                src="https://i.ibb.co/8x3b9L7/cycling.png"
-                alt="Package"
-              />
-            </figure>
-            <div className="text-center text-2xl font-semibold font-serif">
-              Cycling
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className="my-5 pb-5">
-          <div className="card card-compact w-44 h-44 bg-gray-50 shadow-xl">
-            <figure>
-              <img
-                className="w-full p-12 pt-12 pb-2"
-                src="https://i.ibb.co/Tt9cGxB/camping-tent.png"
-                alt="Package"
-              />
-            </figure>
-            <div className="text-center text-2xl font-semibold font-serif">
-              Camping
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className="my-5 pb-5">
-          <div className="card card-compact w-44 h-44 bg-gray-50 shadow-xl">
-            <figure>
-              <img
-                className="w-full p-12 pt-12 pb-2"
-                src="https://i.ibb.co/Zg1rC3J/hiking-1.png"
-                alt="Package"
-              />
-            </figure>
-            <div className="text-center text-2xl font-semibold font-serif">
-              Trekings
-            </div>
-          </div>
-        </SwiperSlide>
-      </Swiper>
-    </>
+    <Slider {...settings}>
+      {sliderImage.map(({ img, label }, i) => (
+        <div key={i} className="flex justify-center items-center w-fit h-fit">
+          <Image
+            src={img}
+            alt={label}
+            width={75}
+            height={75}
+            className="mx-auto"
+          />
+        </div>
+      ))}
+    </Slider>
   );
 };
 
-export default Slider;
+type ISlider = { title: string } & IClassName;
+export const SliderSection: FC<ISlider> = ({ title, className }) => {
+  return (
+    <section className="space-y-5 lg:space-y-12">
+      <h1
+        className={cn(
+          "text-xl lg:text-3xl font-semibold text-[#dcdcdc] text-center",
+          className
+        )}
+      >
+        {title}
+      </h1>
+      <FullSlider />
+    </section>
+  );
+};

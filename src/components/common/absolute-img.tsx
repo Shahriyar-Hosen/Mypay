@@ -11,8 +11,8 @@ export const AbsoluteImg: FC<IAbsoluteImg> = ({
   <section className={cn("absolute w-full z-0", className)}>
     <Image
       src={img}
-      width={100}
-      height={100}
+      width={200}
+      height={200}
       className={cn("inset-0", imgClass)}
       alt={alt || "absolute img"}
     />

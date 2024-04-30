@@ -50,3 +50,26 @@ export const footerSocial = [
     link: "https://www.linkedin.com",
   },
 ];
+
+export const sliderImage = [
+  {
+    label: "Visa",
+    img: "/visa-line.png",
+  },
+  {
+    label: "Mastercard",
+    img: "/mastercard.png",
+  },
+  {
+    label: "Paypal",
+    img: "/paypal.png",
+  },
+  {
+    label: "ApplePay",
+    img: "/applepay.png",
+  },
+  {
+    label: "GooglePay",
+    img: "/googlepay.png",
+  },
+];

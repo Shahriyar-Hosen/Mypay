@@ -3,8 +3,8 @@ import Image from "next/image";
 
 export const Hero = () => {
   return (
-    <section className="flex flex-col-reverse md:flex-row justify-between items-center gap-10 relative">
-      <div className="space-y-5">
+    <section className="flex flex-col-reverse md:flex-row justify-between items-center gap-10 relative pb-10 sm:pb-20 lg:pb-40">
+      <div className="space-y-5 pt-20">
         <h1 className="text-center md:text-start md:max-w-[470px] lg:max-w-[550px] xl:max-w-[711px] font-medium text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl leading-tight">
           <span className="bg-gradient-to-r from-[#4B86FC] to-[#75F2F6] bg-clip-text text-transparent font-bold">
             MyPay
@@ -41,10 +41,10 @@ export const Hero = () => {
           height={449}
           className="w-full md:w-[300px] lg:w-[448px] h-auto"
           alt=""
-        />{" "}
+        />
         <AbsoluteImg
           img="/robot-hand.svg"
-          className="hidden md:block -bottom-40 -right-16"
+          className="hidden md:block -bottom-28 -right-6 lg:-bottom-40 lg:-right-16"
           imgClass="w-[619px] h-auto"
         />
       </div>
