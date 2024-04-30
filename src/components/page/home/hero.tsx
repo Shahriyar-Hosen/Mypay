@@ -3,8 +3,12 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { FC } from "react";
 
-export const Button: FC<IChildren & IClassName> = ({ children, className }) => (
-  <button className="w-fit bg-gradient-to-r from-[#4B86FC] to-[#75F2F6] p-[2px] rounded-full mx-auto">
+export const Button: FC<{ imgSize?: string } & IChildren & IClassName> = ({
+  imgSize,
+  children,
+  className,
+}) => (
+  <button className="w-fit h-fit bg-gradient-to-r from-[#4B86FC] to-[#75F2F6] p-[2px] rounded-full">
     <div
       className={cn(
         "h-full w-full p-1.5 lg:p-2 flex items-center justify-center gap-2.5 bg-[#00020D] rounded-full",
@@ -18,7 +22,7 @@ export const Button: FC<IChildren & IClassName> = ({ children, className }) => (
         src="/button-arrow-color-icon.png"
         width={37}
         height={37}
-        className="w-[25px] h-auto lg:w-[37px]"
+        className={cn("w-[25px] h-auto lg:w-[37px]", imgSize)}
         alt=""
       />
     </div>

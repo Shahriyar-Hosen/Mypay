@@ -2,6 +2,7 @@ import {
   AbsoluteImg,
   BackgroundImg,
   GradientShadow,
+  SectionTitle,
 } from "@/components/common";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
@@ -139,9 +140,9 @@ export const Subscribe = () => {
   return (
     <section className="space-y-5">
       <div className="text-center font-medium space-y-5">
-        <h1 className="text-2xl md:text-3xl xl:text-5xl pt-5">
+        <SectionTitle className="pt-5">
           Choisissez votre pack & Abonnez-vous
-        </h1>
+        </SectionTitle>
         <p className="text-xs md:text-base lg:text-lg text-[#E1E1E1]">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit
         </p>
