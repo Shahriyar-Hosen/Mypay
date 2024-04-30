@@ -9,7 +9,7 @@ import {
 
 const Home = () => {
   return (
-    <div className="w-full min-h-screen space-y-[25px] lg:space-y-[50px]">
+    <div className="w-full min-h-screen space-y-[25px] lg:space-y-[50px] pb-10 lg:pb-20">
       <Hero />
       <SliderSection
         title="Nos supports de paiement"
