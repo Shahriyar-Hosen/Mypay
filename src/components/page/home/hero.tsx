@@ -7,7 +7,7 @@ export const Hero = () => {
       <div className="space-y-5 md:pt-20 min-w-fit">
         <h1 className="text-center md:text-start text-xl md:text-2xl lg:text-4xl xl:text-5xl font-bold md:leading-[40.5px] lg:leading-[60.5px] xl:leading-[70.5px] md:max-w-[361px] lg:max-w-[541px] xl:max-w-[721px]">
           <span className="bg-gradient-to-r from-[#4B86FC] to-[#75F2F6] bg-clip-text text-transparent">
-            MyPay{" "}
+            MyPay&nbsp;
           </span>
           Plateforme de gestion{" "}
           <span className="font-medium">

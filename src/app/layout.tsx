@@ -24,7 +24,7 @@ const RootLayout: FC<Readonly<IChildren>> = ({ children }) => (
           imgClass="w-full h-[850px]"
           className="top-0 left-0"
         />
-        <div className="max-w-[1435px] mx-auto px-3.5 md:px-6 lg:px-7 relative overflow-hidden">
+        <div className="max-w-[1435px] mx-auto px-3.5 md:px-6 lg:px-7 relative">
           {children}
           <Footer />
         </div>
