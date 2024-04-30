@@ -12,13 +12,28 @@ export const Hero = () => {
           &nbsp;Plateforme de gestion de paiements en ligne pour business
           High-Risk.
         </h1>
-        <p className="text-sm font-medium md:max-w-[557px] text-[#E1E1E1] leading-6 text-center sm:text-justify md:text-start">
+        <p className="text-sm font-medium md:max-w-[557px] text-[#E1E1E1] leading-6 text-justify md:text-start pb-1.5 md:pb-5">
           Business High-Risk pris en charge : Servitia Financia et Investitiones
           , Mercator es titulorum Pecuniae mutuatae ad diem Mercatores cryptae
           valutarum. Servitia Financia et Investitiones , Mercator es titulorum
           Pecuniae mutuatae ad diem Mercatores cryptae valutarum.
         </p>
+        <button className="w-fit bg-gradient-to-r from-[#4B86FC] to-[#75F2F6] p-[2px] rounded-full">
+          <div className="h-full w-full p-2.5 lg:p-3.5 flex items-center justify-center gap-2.5 bg-[#00020D] rounded-full">
+            <span className="font-medium text-base lg:text-xl uppercase bg-gradient-to-r from-[#4B86FC] to-[#75F2F6] bg-clip-text text-transparent pl-2.5">
+              commencer
+            </span>
+            <Image
+              src="/button-arrow-color-icon.png"
+              width={37}
+              height={37}
+              className="w-[25px] h-auto lg:w-[37px]"
+              alt=""
+            />
+          </div>
+        </button>
       </div>
+
       <div className="relative">
         <Image
           src="/side-hero.svg"
