@@ -1,5 +1,5 @@
 import { SliderSection } from "@/components/common";
-import { Hero, Subscribe } from "@/components/page/home";
+import { API, Hero, Subscribe } from "@/components/page/home";
 
 const Home = () => {
   return (
@@ -7,6 +7,11 @@ const Home = () => {
       <Hero />
       <SliderSection title="Nos supports de paiement" />
       <Subscribe />
+      <API />
+      <SliderSection
+        title="Nos clients"
+        className="text-xl md:text-3xl lg:text-5xl font-medium text-[#f7f7f7] pt-10"
+      />
     </div>
   );
 };

@@ -55,7 +55,7 @@ const StandardCard = () => {
     { label: "Vente de produits numériques" },
   ];
   return (
-    <div className="w-full max-w-[800px] bg-gradient-lite p-[2px] rounded-[10px] relative z-50">
+    <div className="w-full max-w-[800px] bg-gradient-lite p-[2px] rounded-[10px] relative z-20">
       <div className="w-full h-full bg-slate-800 rounded-[10px]">
         <div className="w-full h-full bg-[#F1F1FF]/20 rounded-[10px] relative">
           <GradientShadow className="-top-10 left-40 hidden sm:block" />
@@ -113,11 +113,11 @@ const CustomMadeCard = () => {
     { label: "Interface Adaptée aux Mobiles" },
   ];
   return (
-    <div className="relative w-full max-w-[560px] z-50">
+    <div className="relative w-full max-w-[560px] z-10">
       <GradientShadow className="bottom-0 right-40 hidden sm:block" />
       <BackgroundImg
         img="/card-bg.png"
-        className="rounded-xl overflow-hidden xl:-mt-2.5 xl:-ml-3.5 pb-10 relative shadow-2xl shadow-cyan-700/20"
+        className="rounded-xl overflow-hidden xl:-mt-2.5 xl:-ml-3.5 pb-10 relative shadow-2xl shadow-cyan-700/5"
       >
         <CardContainer>
           <CardButton>CUSTOM MADE</CardButton>
@@ -137,9 +137,9 @@ const CustomMadeCard = () => {
 
 export const Subscribe = () => {
   return (
-    <section className="py-20">
-      <div className="text-center font-medium py-5 space-y-5">
-        <h1 className="text-xl md:text-3xl xl:text-5xl">
+    <section className="space-y-5">
+      <div className="text-center font-medium space-y-5">
+        <h1 className="text-2xl md:text-3xl xl:text-5xl pt-5">
           Choisissez votre pack & Abonnez-vous
         </h1>
         <p className="text-xs md:text-base lg:text-lg text-[#E1E1E1]">
@@ -147,7 +147,7 @@ export const Subscribe = () => {
         </p>
       </div>
 
-      <div className="flex flex-col xl:flex-row justify-center items-center xl:items-start gap-10 xl:gap-0 pt-10 relative">
+      <div className="flex flex-col xl:flex-row justify-center items-center xl:items-start gap-5 sm:gap-10 xl:gap-0 pt-5 lg:pt-10 relative">
         <StandardCard />
         <CustomMadeCard />
 
