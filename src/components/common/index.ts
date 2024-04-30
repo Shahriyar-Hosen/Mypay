@@ -4,3 +4,4 @@ export * from "./back-button";
 export * from "./background-img";
 export * from "./logo";
 export * from "./navbar";
+export * from "./slider";
