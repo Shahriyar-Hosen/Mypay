@@ -27,7 +27,7 @@ const StandardCard = () => {
     { label: "Vente de produits numériques" },
   ];
   return (
-    <div className="w-full max-w-[800px] h-[800px] bg-gradient-lite p-[2px] rounded-[10px]">
+    <div className="w-full max-w-[800px] h-[800px] bg-gradient-lite p-[2px] rounded-[10px] relative z-50">
       <div className="w-full h-full bg-slate-800 rounded-[10px]">
         <div className="w-full h-full bg-[#F1F1FF]/20 rounded-[10px] relative">
           <GradientShadow className="-top-10 left-40" />
@@ -87,7 +87,7 @@ const CustomMadeCard = () => {
   return (
     <BackgroundImg
       img="/card-bg.png"
-      className="w-[560px] h-[756px] rounded-xl"
+      className="w-[560px] h-[756px] rounded-xl overflow-hidden -mt-2.5 -ml-3.5"
     >
       <CardContainer>
         <CardButton>CUSTOM MADE</CardButton>
@@ -117,7 +117,7 @@ export const Subscribe = () => {
         </p>
       </div>
 
-      <div className="flex justify-center items-start">
+      <div className="flex flex-col xl:flex-row justify-center items-start pt-10">
         <StandardCard />
         <CustomMadeCard />
       </div>
