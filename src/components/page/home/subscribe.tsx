@@ -138,7 +138,7 @@ const CustomMadeCard = () => {
 
 export const Subscribe = () => {
   return (
-    <section className="space-y-5">
+    <section className="space-y-5" id="subscribe">
       <div className="text-center font-medium space-y-5">
         <SectionTitle className="pt-5">
           Choisissez votre pack & Abonnez-vous

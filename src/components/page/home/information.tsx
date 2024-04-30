@@ -33,7 +33,7 @@ const InformationInput: FC<IInformationInput> = ({
   <div className="flex flex-col w-full max-w-[364px] space-y-3 cursor-pointer">
     <label
       htmlFor={name}
-      className="font-bold text-lg leading-[26px] tracking-[0.9px]"
+      className="font-bold text-lg leading-[26px] tracking-[0.9px] uppercase"
     >
       {label}
     </label>

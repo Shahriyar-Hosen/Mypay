@@ -10,7 +10,10 @@ export const API = () => {
           Nous disposons d’une api solide fait pour s’intégrer au mieux à votre
           environnement.
         </h1>
-        <Button className="gap-5">VOIR l’API</Button>
+
+        <Button href="/view-api" className="gap-5">
+          VOIR l’API
+        </Button>
       </div>
       <div className="relative">
         <GradientShadow className="top-10 right-0  md:-right-40" />
