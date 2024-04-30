@@ -3,7 +3,7 @@ import Link from "next/link";
 import { FC, memo } from "react";
 
 export const Logo: FC = memo(() => (
-  <Link href="/" className="flex justify-center items-center">
+  <Link href="/">
     <Image
       src="/logo/logo.png"
       alt=""
