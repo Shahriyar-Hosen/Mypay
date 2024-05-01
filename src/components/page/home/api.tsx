@@ -1,5 +1,4 @@
-import { GradientShadow } from "@/components/common";
-import { Button } from "@/components/ui/button";
+import { Button, GradientShadow } from "@/components/common";
 import Image from "next/image";
 
 export const API = () => {

@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/common";
 import { cn } from "@/lib/utils";
 import { Field, Form, Formik, FormikHelpers } from "formik";
 import { FC } from "react";

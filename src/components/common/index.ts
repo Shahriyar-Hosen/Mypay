@@ -1,6 +1,7 @@
 export * from "./absolute-img";
 export * from "./back-button";
 export * from "./background-img";
+export * from "./button";
 export * from "./gradient-shadow";
 export * from "./logo";
 export * from "./navbar";
