@@ -17,7 +17,13 @@ export const BackButton: FC<IClassName> = memo(({ className }) => {
       onClick={() => router.back()}
       className={cn("cursor-pointer font-extrabold", className)}
     >
-      <Image src="/back-arrow.png" width={54} height={54} alt="back button" />
+      <Image
+        src="/back-arrow.png"
+        width={54}
+        height={54}
+        className="w-[25px] md:w-[40px] lg:w-[54px] h-auto"
+        alt="back button"
+      />
     </div>
   );
 });
