@@ -1,15 +1,21 @@
 "use client";
 
 import { sliderImage } from "@/lib/constants";
-import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { FC } from "react";
 import Slider from "react-slick";
+import { SectionTitle } from "./section-title";
+
 // Import css files
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
-import { SectionTitle } from "./section-title";
 
+/**
+ * A full-width slider component using `react-slick`. It displays multiple images
+ * in a carousel with various configurations, such as dots, autoplay, and responsiveness.
+ *
+ * @returns {JSX.Element} - The rendered `FullSlider` component.
+ */
 export const FullSlider = () => {
   const settings = {
     dots: true,
@@ -53,6 +59,14 @@ export const FullSlider = () => {
   );
 };
 
+/**
+ * A section component containing a slider with a title.
+ *
+ * @param {ISlider} props - The props for the `SliderSection` component.
+ * @param {string} props.title - The title of the slider section.
+ * @param {string} [props.className] - Additional CSS class names for styling (optional).
+ * @returns {JSX.Element} - The rendered `SliderSection` component.
+ */
 type ISlider = { title: string } & IClassName;
 export const SliderSection: FC<ISlider> = ({ title, className }) => {
   return (

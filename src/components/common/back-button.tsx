@@ -6,10 +6,14 @@ import { useRouter } from "next/navigation";
 import { FC, memo } from "react";
 
 /**
- * @param className The class can be given the className to design it.
+ * A button that navigates back to the previous page when clicked.
+ * It can be customized with additional CSS class names.
+ *
+ * @param {IClassName} props - The props for the BackButton component.
+ * @param {string} [props.className] - Additional CSS class names to style the button (optional).
  * @description This button is used to go to previous page.
+ * @returns {JSX.Element} - The rendered BackButton component.
  */
-
 export const BackButton: FC<IClassName> = memo(({ className }) => {
   const router = useRouter();
   return (

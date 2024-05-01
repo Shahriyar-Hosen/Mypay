@@ -1,25 +1,28 @@
 import { cn } from "@/lib/utils";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import { FC, PropsWithChildren, memo } from "react";
 
 /**
- * @param img StaticImageData
- * @param children
- * @param className (optional)
- * @param mobImg  StaticImageData (optional)
- * @param overflow boolean (optional)
- * @description Any image to use as background image, here only image should be given. To fix the position class must be given in className.
- * @returns JSX
+ * Interface for the `BackgroundImg` component's props.
+ *
+ * @property {string} img - The URL of the background image.
+ * @property {boolean} [overflow] - If `true`, enables overflow handling.
+ * @property {string} [className] - Additional class names for custom styling.
  */
-
 export interface IBackgroundImage extends PropsWithChildren, IClassName {
   img: string;
-  mobImg?: string;
   overflow?: boolean;
 }
 
+/**
+ * A component that displays a background image with optional overflow handling.
+ * Any child elements are displayed on top of the background image.
+ *
+ * @param {IBackgroundImage} props - The properties passed to the component.
+ * @returns {JSX.Element} - The rendered BackgroundImg component.
+ */
 export const BackgroundImg: FC<IBackgroundImage> = memo(
-  ({ children, img, mobImg, className, overflow }) => (
+  ({ children, img, className, overflow }) => (
     <section
       className={cn(
         "relative w-full",
@@ -37,14 +40,6 @@ export const BackgroundImg: FC<IBackgroundImage> = memo(
           alt="background image"
           fill
         />
-        {mobImg && (
-          <Image
-            src={mobImg}
-            className="w-full block md:hidden"
-            alt="background image"
-            fill
-          />
-        )}
       </div>
       <div className="relative z-10">{children}</div>
     </section>

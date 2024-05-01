@@ -2,6 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { FC, memo } from "react";
 
+/**
+ * A logo component that serves as a link to the homepage.
+ * It uses the `Image` component from Next.js for optimized image handling,
+ * with a default logo source and specified dimensions.
+ *
+ * @returns {JSX.Element} - The rendered `Logo` component.
+ */
 export const Logo: FC = memo(() => (
   <Link href="/">
     <Image
