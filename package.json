@@ -20,6 +20,7 @@
     "react": "^18",
     "react-dom": "^18",
     "react-slick": "^0.30.2",
+    "sharp": "^0.33.3",
     "slick-carousel": "^1.8.1",
     "tailwind-merge": "^2.3.0"
   },
