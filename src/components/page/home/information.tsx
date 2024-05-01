@@ -114,8 +114,8 @@ export const Information = () => {
 
             <div className="flex justify-start items-end sm:w-full">
               <Button
-                className="gap-16 sm:h-16"
-                imgSize="sm:w-[40px] lg:w-[40px]"
+                className="gap-12 lg:p-[9px]"
+                imgSize="sm:w-[40px] lg:w-[49.5px]"
               >
                 Submit
               </Button>
