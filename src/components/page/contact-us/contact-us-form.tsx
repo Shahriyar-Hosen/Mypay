@@ -13,14 +13,14 @@ const initialValues = {
   message: "",
 };
 
-interface IInformationInput extends IClassName {
+interface IContactUsInput extends IClassName {
   label: string;
   placeholder: string;
   name: keyof typeof initialValues;
   type?: HTMLInputType;
   isTextArea?: boolean;
 }
-const InformationInput: FC<IInformationInput> = ({
+const ContactUsInput: FC<IContactUsInput> = ({
   type,
   label,
   name,
@@ -70,23 +70,23 @@ export const ContactUsForm = () => {
       <Formik initialValues={initialValues} onSubmit={handleSubmit}>
         <Form className="space-y-5 mx-auto p-5 lg:pb-8">
           <div className="grid grid-cols-1 gap-8 justify-items-center place-items-center">
-            <InformationInput
+            <ContactUsInput
               label="Votre nom"
               name="firstName"
               placeholder="John"
             />
-            <InformationInput
+            <ContactUsInput
               label="Votre nom"
               name="lastName"
               placeholder="Doe"
             />
-            <InformationInput
+            <ContactUsInput
               name="email"
               type="email"
               label="Email"
               placeholder="John@doe.com"
             />
-            <InformationInput
+            <ContactUsInput
               isTextArea
               name="message"
               label="Message"
