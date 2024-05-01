@@ -1,6 +1,6 @@
 "use client";
 
-import { SectionTitle } from "@/components/common";
+import { AbsoluteImg, GradientShadow, SectionTitle } from "@/components/common";
 import { Field, Form, Formik, FormikHelpers } from "formik";
 import { FC } from "react";
 import { Button } from "./hero";
@@ -64,7 +64,15 @@ export const Information = () => {
   };
 
   return (
-    <section className="py-10 lg:py-20 space-y-10 lg:space-y-20">
+    <section className="py-10 space-y-10 lg:space-y-20 relative">
+      <AbsoluteImg
+        img="/planet.png"
+        imgClass="w-[352px] h-[341px]"
+        className="hidden xl:block top-[15%] -left-[8.4%]"
+      />
+      <GradientShadow className="-top-[15%] -left-[8.4%]" />
+      <GradientShadow className="bottom-[15%] -right-[30%]" />
+
       <SectionTitle>Demande d’information</SectionTitle>
       <Formik initialValues={initialValues} onSubmit={handleSubmit}>
         <Form className="space-y-5 max-w-[800px] mx-auto">
