@@ -18,7 +18,7 @@ export const StandardCard = () => {
     <div className="w-full max-w-[800px] bg-gradient-lite p-[2px] rounded-[10px] relative z-20">
       <div className="w-full h-full bg-slate-800 rounded-[10px]">
         <div className="w-full h-full bg-[#F1F1FF]/20 rounded-[10px] relative">
-          <GradientShadow className="-top-10 left-40 hidden sm:block" />
+          <GradientShadow className="-top-10 left-40 hidden sm:block -z" />
 
           <CardContainer>
             <CardButton>STANDARD</CardButton>
@@ -50,7 +50,7 @@ export const StandardCard = () => {
               </UnorderedListItems>
             </div>
           </CardContainer>
-          <button className="bg-[#07111E] w-full rounded-lg text-center font-medium text-[28px] leading-[42px] py-2.5 md:py-5 mt-4">
+          <button className="bg-[#07111E] hover:bg-cyan-600/95 transition-all delay-150 w-full rounded-lg text-center font-medium text-[28px] leading-[42px] py-2.5 md:py-5 mt-4">
             Démarrer
           </button>
         </div>
