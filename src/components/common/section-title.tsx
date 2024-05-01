@@ -7,7 +7,7 @@ export const SectionTitle: FC<IClassName & IChildren> = ({
 }) => (
   <h1
     className={cn(
-      "text-2xl md:text-3xl xl:text-[47px] md:leading-[50px] xl:leading-[70.5px] text-center text-[#f7f7f7]",
+      "text-2xl md:text-3xl lg:text-[47px] md:leading-[50px] lg:leading-[70.5px] text-center text-[#f7f7f7]",
       className
     )}
   >

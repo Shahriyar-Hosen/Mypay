@@ -8,10 +8,10 @@ export const Button: FC<
   { imgSize?: string; href?: string } & IChildren & IClassName
 > = ({ imgSize, children, className, href }) => {
   const button = (
-    <button className="w-fit h-fit bg-gradient-to-r from-[#4B86FC] to-[#75F2F6] p-[2px] rounded-full">
+    <button className="w-auto h-fit bg-gradient-to-r from-[#4B86FC] to-[#75F2F6] p-[2px] rounded-full">
       <div
         className={cn(
-          "h-full w-full p-1.5 lg:p-2 flex items-center justify-center gap-2.5 bg-[#00020D] rounded-full",
+          "h-full w-full p-1.5 lg:p-2.5 flex items-center justify-center gap-2.5 bg-[#00020D] rounded-full",
           className
         )}
       >
@@ -58,7 +58,9 @@ export const Hero = () => {
           Pecuniae mutuatae ad diem Mercatores cryptae valutarum.
         </p>
 
-        <Button href="#subscribe">commencer</Button>
+        <Button className="lg:p-3.5" href="#subscribe">
+          commencer
+        </Button>
       </div>
 
       <div className="relative pt-10 md:pt-0">
