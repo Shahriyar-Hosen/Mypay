@@ -1,58 +1,43 @@
-import { cva, type VariantProps } from "class-variance-authority";
-import * as React from "react";
-
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 import Link from "next/link";
+import { ButtonHTMLAttributes, FC } from "react";
 
-const buttonVariants = cva(
-  "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
-  {
-    variants: {
-      variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",
-        destructive:
-          "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        outline:
-          "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
-        secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-primary underline-offset-4 hover:underline",
-      },
-      size: {
-        default: "h-10 px-4 py-2",
-        sm: "h-9 rounded-md px-3",
-        lg: "h-11 rounded-md px-8",
-        icon: "h-10 w-10",
-      },
-    },
-    defaultVariants: {
-      variant: "default",
-      size: "default",
-    },
-  }
-);
-
-export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof buttonVariants> {
+type ExtraTypes = IClassName & ButtonHTMLAttributes<HTMLButtonElement>;
+interface IButton extends ExtraTypes {
+  imgSize?: string;
   href?: string;
 }
+export const Button: FC<IButton> = ({ children, className, imgSize, href }) => {
+  const button = (
+    <button className="w-auto h-fit bg-gradient-to-r from-[#4B86FC] to-[#75F2F6] p-[2px] rounded-full">
+      <div
+        className={cn(
+          "h-full w-full p-1.5 lg:p-2.5 flex items-center justify-center gap-2.5 bg-[#00020D] rounded-full",
+          className
+        )}
+      >
+        <span className="font-medium text-base lg:text-xl uppercase bg-gradient-to-r from-[#4B86FC] to-[#75F2F6] bg-clip-text text-transparent pl-2.5">
+          {children}
+        </span>
+        <Image
+          src="/button-arrow-color-icon.png"
+          width={37}
+          height={37}
+          className={cn("w-[25px] h-auto lg:w-[37px]", imgSize)}
+          alt=""
+        />
+      </div>
+    </button>
+  );
 
-const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, href, ...props }, ref) => {
-    const Comp = (
-      <button
-        className={cn(buttonVariants({ variant, size, className }))}
-        ref={ref}
-        {...props}
-      />
-    );
-
-    return !href ? Comp : <Link href={href}>{Comp}</Link>;
-  }
-);
+  return href ? (
+    <Link href={href} className="block">
+      {button}
+    </Link>
+  ) : (
+    button
+  );
+};
 
 Button.displayName = "Button";
-
-export { Button, buttonVariants };

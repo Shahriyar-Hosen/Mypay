@@ -1,9 +1,9 @@
 "use client";
 
 import { AbsoluteImg, GradientShadow, SectionTitle } from "@/components/common";
+import { Button } from "@/components/ui/button";
 import { Field, Form, Formik, FormikHelpers } from "formik";
 import { FC } from "react";
-import { Button } from "./hero";
 
 type IValues = typeof initialValues;
 const initialValues = {

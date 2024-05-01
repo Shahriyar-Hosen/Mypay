@@ -1,9 +1,9 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Field, Form, Formik, FormikHelpers } from "formik";
 import { FC } from "react";
-import { Button } from "../home";
 
 type IValues = typeof initialValues;
 const initialValues = {

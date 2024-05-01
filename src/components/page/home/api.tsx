@@ -1,6 +1,6 @@
 import { GradientShadow } from "@/components/common";
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import { Button } from "./hero";
 
 export const API = () => {
   return (

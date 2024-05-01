@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { FC } from "react";
 
@@ -167,7 +166,7 @@ export const NotFound: FC = () => {
           known page.
         </p>
         <Link href="/" title="Return Home">
-          <Button className="flex items-center space-x-2 mt-12 rounded">
+          <button className="flex items-center space-x-2 mt-12 rounded-md bg-cyan-500/95 text-white px-5 py-2.5">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -181,7 +180,7 @@ export const NotFound: FC = () => {
               ></path>
             </svg>
             <span>Return Home</span>
-          </Button>
+          </button>
         </Link>
       </div>
     </div>
