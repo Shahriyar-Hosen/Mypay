@@ -2,6 +2,13 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { FC } from "react";
 
+/**
+ * A component that displays an image positioned absolutely with optional class
+ * names for custom styling. The image has a fixed width and height of 200.
+ *
+ * @param {IAbsoluteImg} props - The properties passed to the component.
+ * @returns {JSX.Element} - The rendered AbsoluteImg component.
+ */
 export const AbsoluteImg: FC<IAbsoluteImg> = ({
   img,
   alt,

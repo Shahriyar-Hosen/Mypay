@@ -1,10 +1,9 @@
-import { GradientShadow } from "@/components/common";
+import { Button, GradientShadow } from "@/components/common";
 import Image from "next/image";
-import { Button } from "./hero";
 
 export const API = () => {
   return (
-    <section className="flex flex-col-reverse md:flex-row justify-center md:justify-around items-center md:items-start gap-10 md:gap-5 pt-10 md:pt-0">
+    <section className="flex flex-col-reverse md:flex-row justify-center md:justify-around items-center md:items-start gap-10 md:gap-5 pt-10">
       <div className="space-y-5 lg:space-y-10">
         <h1 className="text-2xl lg:text-4xl xl:text-[40px] font-medium text-[#e1e1e1] w-full md:max-w-[380px] lg:max-w-[550px] xl:max-w-[613px] md:leading-[40px] lg:leading-[60px]">
           Nous disposons d’une api solide fait pour s’intégrer au mieux à votre

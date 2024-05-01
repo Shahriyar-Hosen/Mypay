@@ -2,18 +2,19 @@ import { BackgroundImg } from "@/components/common";
 import Image from "next/image";
 import { FC } from "react";
 
-export const InfoCard = () => {
-  type IInfoBox = IChildren & { size?: number; icon: string };
-  const InfoBox: FC<IInfoBox> = ({ children, size, icon }) => (
-    <div className="flex justify-start items-center gap-2.5">
-      <Image src={icon} width={size || 31} height={size || 31} alt="" />
-      {children}
-    </div>
-  );
-  const InfoText: FC<IChildren> = ({ children }) => (
-    <p className="text-base leading-[24px] text-[#f7f7f7]">{children}</p>
-  );
+type IInfoBox = IChildren & { size?: number; icon: string };
+const InfoBox: FC<IInfoBox> = ({ children, size, icon }) => (
+  <div className="flex justify-start items-center gap-2.5">
+    <Image src={icon} width={size || 31} height={size || 31} alt="" />
+    {children}
+  </div>
+);
 
+const InfoText: FC<IChildren> = ({ children }) => (
+  <p className="text-base leading-[24px] text-[#f7f7f7]">{children}</p>
+);
+
+export const InfoCard = () => {
   return (
     <BackgroundImg
       img="/contact-us-bg.png"
