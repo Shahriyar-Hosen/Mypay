@@ -1,11 +1,11 @@
 import { Navbar } from "@/components/common";
 import { FC } from "react";
 
-const RootLayout: FC<Readonly<IChildren>> = ({ children }) => (
+const ProtectedLayout: FC<Readonly<IChildren>> = ({ children }) => (
   <main>
     <Navbar />
     {children}
   </main>
 );
 
-export default RootLayout;
+export default ProtectedLayout;
