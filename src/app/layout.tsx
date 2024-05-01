@@ -20,7 +20,7 @@ const RootLayout: FC<Readonly<IChildren>> = ({ children }) => (
     <body className={poppins.className}>
       <div className="w-full h-full bg-[#00020D] text-white min-h-screen relative overflow-hidden">
         <AbsoluteImg
-          img="/hero-bg.png"
+          img="/main-bg.png"
           imgClass="w-full h-[850px]"
           className="top-0 left-0"
         />
