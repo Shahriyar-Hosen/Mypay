@@ -12,8 +12,7 @@ const SocialButton: FC<ISocialButton> = ({ children, img }) => {
   );
 };
 
-interface IAuthWrapper extends IChildren {}
-export const AuthWrapper: FC<IAuthWrapper> = ({ children }) => {
+export const AuthWrapper: FC<IChildren> = ({ children }) => {
   return (
     <section className="relative w-fit md:h-full lg:w-full max-w-[1199px] mx-auto rounded-2xl sm:rounded-3xl lg:rounded-[30px] bg-[#f3f3f3] p-4 sm:p-6 lg:p-3 lg:px-[14px] flex flex-col md:flex-row justify-center lg:justify-start items-center gap-5 lg:gap-12 xl:gap-[95px]">
       <AuthCard />
