@@ -26,7 +26,6 @@ const RootLayout: FC<Readonly<IChildren>> = ({ children }) => (
         />
         <div className="max-w-[1435px] mx-auto px-3.5 md:px-6 lg:px-7 relative">
           {children}
-          <Footer />
         </div>
       </div>
     </body>
