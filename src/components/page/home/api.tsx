@@ -11,7 +11,11 @@ export const API = () => {
           environnement.
         </h1>
 
-        <Button href="/view-api" className="gap-5">
+        <Button
+          href="/view-api"
+          className="gap-6 lg:gap-[50px] lg:p-2"
+          imgSize="lg:w-[69.5px]"
+        >
           VOIR l’API
         </Button>
       </div>
