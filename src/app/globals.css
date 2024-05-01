@@ -3,11 +3,9 @@
 @tailwind utilities;
 
 .bg-gradient-lite {
-  /* bg-[linear-gradient(96.86deg,#4b86fc_-71.87%,#75f2f6_91.18%)] */
   background: linear-gradient(96.86deg, #4b86fc -71.87%, #75f2f6 91.18%);
 }
 .bg-gradient-text-lite {
-  /* bg-clip-text text-transparent bg-[linear-gradient(95.16deg,#4b86fc_-75.89%,#75f2f6_155.97%)] */
   background: -webkit-linear-gradient(
     95.16deg,
     #4b86fc -75.89%,
