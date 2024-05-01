@@ -8,7 +8,12 @@ export const Footer = () => {
     <footer className="pt-10 py-5">
       <div className="flex justify-center sm:justify-between items-start gap-10 flex-wrap">
         <div className="space-y-10 w-full lg:w-auto">
-          <Logo />
+          <div className="flex gap-5 md:gap-7 justify-start items-center">
+            <Logo />
+            <h1 className="text-2xl md:text-[35px] font-medium bg-gradient-to-r from-[#4B86FC] to-[#75F2F6] bg-clip-text text-transparent">
+              Mypay
+            </h1>
+          </div>
 
           <p className="text-lg text-white/70 max-w-[312px]">
             A new way to make the payments easy, reliable and secure.
