@@ -26,7 +26,7 @@ export const Footer = () => {
             <div className="flex flex-col justify-center items-start gap-2.5">
               {items.map(({ label, link }, i) => (
                 <Link key={i} href={link}>
-                  <p className="text-white/70 hover:text-white/80 text-base">
+                  <p className="text-white/70 hover:text-white/90 text-base transition-all delay-150">
                     {label}
                   </p>
                 </Link>

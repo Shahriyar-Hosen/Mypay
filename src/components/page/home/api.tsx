@@ -19,7 +19,7 @@ export const API = () => {
         </Button>
       </div>
       <div className="relative">
-        <GradientShadow className="top-10 right-0  md:-right-40" />
+        <GradientShadow className="top-10 right-0  md:-right-40 -z-50" />
         <Image
           src="/view-api.svg"
           width={481}

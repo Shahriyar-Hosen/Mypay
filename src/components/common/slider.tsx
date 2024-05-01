@@ -1,14 +1,15 @@
 "use client";
 
 import { sliderImage } from "@/lib/constants";
-import Image from "next/image";
 import { FC } from "react";
 import Slider from "react-slick";
 import { SectionTitle } from "./section-title";
 
 // Import css files
+import Image from "next/image";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
+import { cn } from "@/lib/utils";
 
 /**
  * A full-width slider component using `react-slick`. It displays multiple images
@@ -44,15 +45,20 @@ export const FullSlider = () => {
 
   return (
     <Slider {...settings}>
-      {sliderImage.map(({ img, label }, i) => (
-        <div key={i} className="flex justify-center items-center w-fit h-fit">
-          <Image
-            src={img}
-            alt={label}
-            width={75}
-            height={75}
-            className="mx-auto"
-          />
+      {sliderImage.map(({ img, label, height, width }, i) => (
+        <div key={i} className="w-full min-h-[75px]">
+          <div className="flex justify-center items-center">
+            <Image
+              src={img}
+              alt={label}
+              width={width}
+              height={height}
+              className={cn(
+                "mx-auto my-auto",
+                label === "Mastercard" && "py-[12.5px]"
+              )}
+            />
+          </div>
         </div>
       ))}
     </Slider>
