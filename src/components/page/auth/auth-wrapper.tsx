@@ -2,10 +2,8 @@ import { AuthCard } from "@/components/page/auth";
 import Image from "next/image";
 import { FC } from "react";
 
-export const SocialButton: FC<{ img: string } & IChildren> = ({
-  children,
-  img,
-}) => {
+type ISocialButton = { img: string } & IChildren;
+const SocialButton: FC<ISocialButton> = ({ children, img }) => {
   return (
     <button className="text-sm leading-[19.6px] tracking-[-1%] flex justify-center items-center gap-0.5 border border-[#eaeff4] rounded-lg py-3 px-5 w-full sm:w-[47%] shadow-sm">
       <Image src={img} width={24} height={24} alt="" />
@@ -15,7 +13,6 @@ export const SocialButton: FC<{ img: string } & IChildren> = ({
 };
 
 interface IAuthWrapper extends IChildren {}
-
 export const AuthWrapper: FC<IAuthWrapper> = ({ children }) => {
   return (
     <section className="relative w-fit md:h-full lg:w-full max-w-[1199px] mx-auto rounded-2xl sm:rounded-3xl lg:rounded-[30px] bg-[#f3f3f3] p-4 sm:p-6 lg:p-3 lg:px-[14px] flex flex-col md:flex-row justify-center lg:justify-start items-center gap-5 lg:gap-12 xl:gap-[95px]">

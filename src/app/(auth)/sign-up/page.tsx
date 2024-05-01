@@ -1,7 +1,11 @@
+import { AuthWrapper, SignUpForm } from "@/components/page/auth";
+
 const SignUp = () => {
   return (
-    <main>
-      <h1>SignUp page</h1>
+    <main className="min-h-screen py-5 lg:py-10">
+      <AuthWrapper>
+        <SignUpForm />
+      </AuthWrapper>
     </main>
   );
 };
