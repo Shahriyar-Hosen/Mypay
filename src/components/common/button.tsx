@@ -35,7 +35,7 @@ export const Button: FC<IButton> = ({ children, className, imgSize, href }) => {
     <button className="w-auto h-fit bg-gradient-to-r from-[#4B86FC] to-[#75F2F6] p-[2px] rounded-full">
       <div
         className={cn(
-          "h-full w-full p-1.5 lg:p-2.5 flex items-center justify-center gap-2.5 bg-[#00020D] rounded-full",
+          "h-full w-full p-1.5 lg:p-2.5 flex items-center justify-center gap-2.5 bg-[#00020D] hover:bg-slate-950/95 rounded-full transition-all delay-150",
           className
         )}
       >

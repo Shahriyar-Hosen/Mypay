@@ -20,7 +20,7 @@ const customCardItem = [
 export const CustomMadeCard = () => {
   return (
     <div className="relative w-full max-w-[560px] z-10">
-      <GradientShadow className="bottom-0 right-40 hidden sm:block" />
+      <GradientShadow className="bottom-0 right-40 hidden sm:block -z-50" />
       <BackgroundImg
         img="/card-bg.png"
         className="rounded-xl overflow-hidden xl:-mt-2.5 xl:-ml-3.5 pb-10 relative shadow-2xl shadow-cyan-700/5"

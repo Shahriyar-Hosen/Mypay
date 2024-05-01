@@ -18,7 +18,7 @@ export const StandardCard = () => {
     <div className="w-full max-w-[800px] bg-gradient-lite p-[2px] rounded-[10px] relative z-20">
       <div className="w-full h-full bg-slate-800 rounded-[10px]">
         <div className="w-full h-full bg-[#F1F1FF]/20 rounded-[10px] relative">
-          <GradientShadow className="-top-10 left-40 hidden sm:block" />
+          <GradientShadow className="-top-10 left-40 hidden sm:block -z-50" />
 
           <CardContainer>
             <CardButton>STANDARD</CardButton>

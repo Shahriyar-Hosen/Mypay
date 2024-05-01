@@ -37,7 +37,7 @@ const InfoInput: FC<IInfoInput> = ({ type, label, name, placeholder }) => (
         name={name}
         type={type || "text"}
         placeholder={placeholder}
-        className="bg-transparent focus:outline-none text-lg placeholder:leading-[27px]"
+        className="bg-transparent focus:outline-none text-lg placeholder:leading-[27px] w-full"
       />
     </div>
   </div>
@@ -56,10 +56,10 @@ export const InformationForm = () => {
 
   return (
     <Formik initialValues={initialValues} onSubmit={handleSubmit}>
-      <Form className="space-y-5 max-w-[800px] mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 justify-items-center place-items-center">
+      <Form className="space-y-5 max-w-[800px] mx-auto relative z-50">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 place-items-center sm:place-items-end">
           <InfoInput label="Nom" name="nom" placeholder="Votre nom" />
-          <InfoInput label="Prenom" name="nom" placeholder="Votre prénom" />
+          <InfoInput label="Prenom" name="prenom" placeholder="Votre prénom" />
           <InfoInput
             name="email"
             type="email"
@@ -89,10 +89,10 @@ export const InformationForm = () => {
             placeholder="(+33) 675 763 445"
           />
 
-          <div className="flex justify-start items-end sm:w-full">
+          <div className="flex justify-start items-end sm:w-full px-5">
             <Button
-              className="gap-12 lg:p-[9px]"
-              imgSize="sm:w-[40px] lg:w-[49.5px]"
+              className="gap-12 sm:gap-[74px] lg:p-[9px]"
+              imgSize="sm:w-[45px] lg:w-[49.5px]"
             >
               Submit
             </Button>

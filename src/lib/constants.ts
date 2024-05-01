@@ -55,21 +55,31 @@ export const sliderImage = [
   {
     label: "Visa",
     img: "/visa-line.png",
+    width: 75,
+    height: 75,
   },
   {
     label: "Mastercard",
     img: "/mastercard.png",
+    width: 75,
+    height: 50,
   },
   {
     label: "Paypal",
     img: "/paypal.png",
+    width: 84,
+    height: 75,
   },
   {
     label: "ApplePay",
     img: "/applepay.png",
+    width: 75,
+    height: 75,
   },
   {
     label: "GooglePay",
     img: "/googlepay.png",
+    width: 75,
+    height: 75,
   },
 ];
