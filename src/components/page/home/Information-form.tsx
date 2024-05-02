@@ -31,13 +31,13 @@ const InfoInput: FC<IInfoInput> = ({ type, label, name, placeholder }) => (
     >
       {label}
     </label>
-    <div className="py-[20.5px] px-[25px] rounded-xl bg-[linear-gradient(144.39deg,#ffffff66_-278.56%,#6d6d6d66_-78.47%,#11101d66_91.61%)]">
+    <div className="rounded-xl bg-[linear-gradient(144.39deg,#ffffff66_-278.56%,#6d6d6d66_-78.47%,#11101d66_91.61%)]">
       <Field
         id={name}
         name={name}
         type={type || "text"}
         placeholder={placeholder}
-        className="bg-transparent focus:outline-none text-lg placeholder:leading-[27px] w-full"
+        className="bg-transparent focus:outline-none text-lg placeholder:leading-[27px] w-full py-[20.5px] px-[25px] rounded-xl"
       />
     </div>
   </div>
