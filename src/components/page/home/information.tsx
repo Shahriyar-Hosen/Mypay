@@ -12,7 +12,9 @@ export const Information = () => {
       <GradientShadow className="-top-[15%] -left-[8.4%]" />
       <GradientShadow className="bottom-[15%] -right-[30%]" />
 
-      <SectionTitle>Demande d’information</SectionTitle>
+      <SectionTitle className="relative z-20">
+        Demande d’information
+      </SectionTitle>
       <InformationForm />
     </section>
   );
